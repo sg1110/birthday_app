@@ -9,6 +9,7 @@ class Calendar < Sinatra::Base
   end
 
   post '/birthday' do
+    p params
     session[:entered_name] = params[:entered_name]
     redirect '/your_birthday'
   end
