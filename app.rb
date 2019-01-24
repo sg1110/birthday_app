@@ -15,7 +15,8 @@ class Calendar < Sinatra::Base
     session[:entered_date] = params[:entered_date]
 
     @date=session[:entered_date].to_s
-    @todays_date = Date.today.to_s
+    @todays_date = Date.today.to_s #why it needs to be changed
+    #string??? p of Date.today output is 2019-01-24
     redirect '/your_birthday' if @date == @todays_date
   end
 
